@@ -38,13 +38,11 @@ class SportsTeam
   end
 
   def update_points(result)
-    if result == 'win'
-      @points += 3
-    elsif result == 'equal'
-      @points += 1
-    else
-      @points += -3
-    end
+
+      @points += 3 if result == 'win'
+      @points += 1 if result == 'equal'
+      @points += -3 if result == 'loss'
+
   end
 
 end
