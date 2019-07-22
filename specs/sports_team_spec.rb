@@ -29,5 +29,12 @@ class TestSportsTeam < MiniTest::Test
     assert_equal('Johan Cruijff', @sports_team.get_coach_name())
   end
 
+  def test_set_coach_name()
+    #Act
+    @sports_team.set_coach_name('Patrick Kluivert')
+    #Assert
+    assert_equal('Patrick Kluivert', @sports_team.get_coach_name())
+  end
+
 
 end
