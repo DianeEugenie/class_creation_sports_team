@@ -76,6 +76,29 @@ class TestSportsTeam < MiniTest::Test
 
   # Create a method that takes in whether the team has won or lost and updates the points property for a win.
 
+  def test_update_points__win()
+    #Act
+    @sports_team.update_points('win')
+    #Assert
+    assert_equal(3, @sports_team.points)
+  end
+
+  def test_update_points__loss()
+    #Act
+    @sports_team.update_points('loss')
+
+    #Assert
+    assert_equal(-3, @sports_team.points)
+  end
+
+  def test_update_points__equal()
+    #Act
+    @sports_team.update_points('equal')
+
+    #Assert
+    assert_equal(1, @sports_team.points)
+  end
+
 
 
 end
