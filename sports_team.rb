@@ -30,4 +30,11 @@ class SportsTeam
     @players.push(new_player)
   end
 
+  def existing_player(player)
+    for player in @players
+      return player == player
+    end
+  end
+
+
 end

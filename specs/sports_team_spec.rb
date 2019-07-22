@@ -60,4 +60,12 @@ class TestSportsTeam < MiniTest::Test
     assert_equal(4, @sports_team.players.count())
   end
 
+  # Add a method that takes in a string of a player's name and checks to see if they are in the players array.
+
+  def test_existing_player()
+    #Assert
+    assert_equal(true, @sports_team.existing_player('Frank de Boer'))
+
+  end
+
 end
