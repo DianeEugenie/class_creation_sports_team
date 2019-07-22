@@ -17,5 +17,17 @@ class TestSportsTeam < MiniTest::Test
     @sports_team = SportsTeam.new('Ajax', ['Ruud van Nistelrooij', 'Frank de Boer', 'Raffael van der Vaart'], 'Johan Cruijff')
   end
 
+  def test_get_team_name()
+    assert_equal('Ajax', @sports_team.get_team_name())
+  end
+
+  def test_get_player_names()
+    assert_equal(['Ruud van Nistelrooij', 'Frank de Boer', 'Raffael van der Vaart'], @sports_team.get_player_names())
+  end
+
+  def test_get_coach_name()
+    assert_equal('Johan Cruijff', @sports_team.get_coach_name())
+  end
+
 
 end
