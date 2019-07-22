@@ -26,4 +26,8 @@ class SportsTeam
   attr_reader :team_name, :players
   attr_accessor :coach
 
+  def add_new_player(new_player)
+    @players.push(new_player)
+  end
+
 end

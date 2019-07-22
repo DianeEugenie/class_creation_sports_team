@@ -53,4 +53,11 @@ class TestSportsTeam < MiniTest::Test
     assert_equal('Patrick Kluivert', @sports_team.coach)
   end
 
+  def test_add_new_player()
+    #Act
+    @sports_team.add_new_player('Frenkie de Jong')
+    #Assert
+    assert_equal(4, @sports_team.players.count())
+  end
+
 end
