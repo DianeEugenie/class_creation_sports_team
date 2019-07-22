@@ -62,10 +62,13 @@ class TestSportsTeam < MiniTest::Test
 
   # Add a method that takes in a string of a player's name and checks to see if they are in the players array.
 
-  def test_existing_player()
+  def test_existing_player__true()
     #Assert
     assert_equal(true, @sports_team.existing_player('Frank de Boer'))
+  end
 
+  def test_existing_player__false()
+    assert_equal(false, @sports_team.existing_player('Bas Jonker'))
   end
 
   # Add a points property into your class that starts at 0.

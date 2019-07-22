@@ -31,10 +31,8 @@ class SportsTeam
     @players.push(new_player)
   end
 
-  def existing_player(player)
-    for player in @players
-      return player == player
-    end
+  def existing_player(check_player)
+    @players.include?(check_player)
   end
 
   def update_points(result)
