@@ -14,7 +14,7 @@ require_relative('../sports_team.rb')
 class TestSportsTeam < MiniTest::Test
 
   def setup()
-    @sports_team = SportsTeam.new('Ajax', ['Ruud van Nistelrooij', 'Frank de Boer', 'Raffael van der Vaart'], 'Johan Cruijff')
+    @sports_team = SportsTeam.new('Ajax', ['Ruud van Nistelrooij', 'Frank de Boer', 'Raffael van der Vaart'], 'Johan Cruijff', 0)
   end
 
   # def test_get_team_name()
@@ -67,5 +67,15 @@ class TestSportsTeam < MiniTest::Test
     assert_equal(true, @sports_team.existing_player('Frank de Boer'))
 
   end
+
+  # Add a points property into your class that starts at 0.
+  def test_get_points_total()
+    assert_equal(0, @sports_team.points)
+  end
+
+
+  # Create a method that takes in whether the team has won or lost and updates the points property for a win.
+
+
 
 end
